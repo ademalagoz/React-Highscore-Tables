@@ -1,8 +1,41 @@
 .App {
   text-align: center;
+  border: 2px solid blue;
+  color: rgb(158, 213, 248);
+  margin: 5px;
+  font-family: fantasy;
 }
 
-.App-logo {
+.countryTable {
+  border: 10px solid greenyellow;
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+  height: 50px;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+td {
+  /* align-items: center; */
+}
+#name {
+  color: black;
+  margin-left: 150px;
+}
+#score {
+  color: rgb(192, 54, 54);
+  margin-left: 250px;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +68,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
