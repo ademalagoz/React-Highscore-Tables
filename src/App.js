@@ -10,7 +10,6 @@ function App() {
           High Scores per Country
         </h1>
       </div>
-
       <HighScoreTable />
     </div>
   );
