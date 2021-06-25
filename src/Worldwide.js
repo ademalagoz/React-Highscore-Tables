@@ -1,8 +1,15 @@
 import { React } from "react";
+import allScores from "./Scores";
 
-export default function PlayerScore(props) {
-  //Sorting scores
-  let sortScores = props.scores.sort((a, b) => {
+export default function Worldwide(props) {
+  //Getting all scores as an array
+  let worldWideScores = [];
+  allScores
+    .map((country) => country.scores)
+    .map((score) => (worldWideScores = worldWideScores.concat(score)));
+  console.log(worldWideScores);
+  //Sorting all scores
+  worldWideScores.sort((a, b) => {
     if (props.sorting) {
       return a.s < b.s ? 1 : -1;
     } else {
@@ -21,6 +28,7 @@ export default function PlayerScore(props) {
           Sort Scores
         </button>
         <div className="card">
+          <h2 className="d-inline p-2 bg-dark text-white">WorldWide Scores</h2>
           <table className="table table-responsive table-hover table-danger border-primary">
             <thead>
               <tr class="table-primary">
@@ -36,14 +44,14 @@ export default function PlayerScore(props) {
               </tr>
             </thead>
             <tbody>
-              {sortScores.map((country, index) => {
+              {worldWideScores.map((world, index) => {
                 return (
                   <tr>
                     <td>
                       <h5>{index + 1}</h5>
                     </td>
-                    <td>{country.n.toUpperCase()}</td>
-                    <td>{country.s}</td>
+                    <td>{world.n.toUpperCase()}</td>
+                    <td>{world.s}</td>
                   </tr>
                 );
               })}
