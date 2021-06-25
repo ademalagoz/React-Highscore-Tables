@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PlayerScore from "./PlayerScore";
 import Worldwide from "./Worldwide";
-import allScores from "./Scores";
+import allScores from "./scores";
 
 const HighScoreTable = () => {
   const [sorting, setSorting] = useState(false);

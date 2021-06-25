@@ -1,5 +1,5 @@
 import { React } from "react";
-import allScores from "./Scores";
+import allScores from "./scores";
 
 export default function Worldwide(props) {
   //Getting all scores as an array
